@@ -36,13 +36,11 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
 
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '~> 3.5.0'
 
   gem 'factory_girl_rails'
 
   gem 'shoulda-matchers'
-
-  gem 'web-console', '>= 3.3.0'
 
   gem 'listen', '~> 3.0.5'
 
@@ -52,7 +50,7 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
