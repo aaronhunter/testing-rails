@@ -1,0 +1,58 @@
+AllCops:
+  EnabledByDefault: true
+  DisplayStyleGuide: true
+  StyleGuideBaseURL: https://github.com/voxable-labs/ruby-style-guide
+
+# Don't require copyright notices
+Style/Copyright:
+  Enabled: false
+  
+# --||----------------------
+#   || Rails
+# ==||======================
+
+# Don't require documentation for ActiveRecord migrations.
+Style/DocumentationMethod:
+  Exclude:
+    - db/migrate/*.rb
+
+# --||----------------------
+#   || RSpec
+# ==||======================
+
+# Use braces for block delimiters in RSpec.
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  FunctionalMethods:
+    - before
+    - let
+    - let!
+    - subject
+    - watch
+    - expect
+
+# Ignore absence of method call parentheses in RSpec and gemspecs.
+Style/MethodCallWithArgsParentheses:
+  Exclude:
+    - spec/**/*.rb
+    - ./*.gemspec
+
+# Ignore block length in RSPec.
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+# Ignore hg methods.
+Style/MethodCallWithArgsParentheses:
+  IgnoredMethods:
+    -button
+    -card
+    -gallery
+    -before_handler
+
+# Exclude hg blocks.
+Metrics/BlockLength:
+  ExcludedMethods:
+    -class_methods
+    -dynamic
+    -gallery
